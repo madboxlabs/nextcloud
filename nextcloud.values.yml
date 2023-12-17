@@ -1,0 +1,11 @@
+## nextcloud.values.yml
+nextcloud:
+  host: "nextcloud.<domain.com>" # Host to reach NextCloud
+  username: "admin" # Admin
+  password: "<PASSWORD>" # Admin Password
+(...)
+persistence:
+  enabled: true # Change to true
+  existingClaim: "nextcloud-ssd" # Persistent Volume Claim created earlier
+  accessMode: ReadWriteOnce
+  size: "50Gi"
